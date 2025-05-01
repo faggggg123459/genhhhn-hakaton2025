@@ -1,0 +1,51 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-image: url('quiz-background.jpg'); /* 🔥 Вставте свою фонову картинку */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+}
+
+.quiz-container {
+    max-width: 600px;
+    margin: 50px auto;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px rgba(255, 215, 0, 0.8);
+}
+
+h1 {
+    font-size: 28px;
+    color: #FFC107;
+}
+
+.intro {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.quiz-box {
+    padding: 15px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #FF9800;
+    border: none;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #e68900;
+}
+
+.hidden {
+    display: none;
+}

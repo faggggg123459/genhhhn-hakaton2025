@@ -1,0 +1,130 @@
+/* Фон */
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #4DC4B0; /* 🔥 Березово-синьо-зелений колір */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('background.jpg'); /* 🔥 Вставте фонову картинку */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Фонова секція */
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    filter: brightness(80%);
+    z-index: -1;
+}
+
+/* Контейнер */
+.container {
+    text-align: center;
+    width: 80%;
+    max-width: 800px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px rgba(77, 196, 176, 0.8);
+}
+
+/* Заголовки */
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+}
+
+/* Анімації */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-50px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+.slide-in {
+    animation: slideIn 1s ease-in-out;
+}
+
+@keyframes textGlow {
+    0% { text-shadow: 0px 0px 10px #4DC4B0; }
+    100% { text-shadow: 0px 0px 20px #3AA892; }
+}
+
+.text-glow {
+    animation: textGlow 1.5s infinite alternate;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+/* Картинки персонажів */
+.hover-scale {
+    width: 30%;
+    margin: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.hover-scale:hover {
+    transform: scale(1.1);
+}
+
+/* Кнопка */
+.glow-btn {
+    padding: 15px 30px;
+    background-color: #4DC4B0;
+    border: none;
+    font-size: 20px;
+    color: black;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 8px;
+    font-weight: bold;
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    0% { box-shadow: 0px 0px 10px #3AA892; }
+    100% { box-shadow: 0px 0px 20px #4DC4B0; }
+}
+
+.glow-btn:hover {
+    background-color: #3AA892;
+}
+
+/* Додаткова анімація */
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+}
+
+.bounce {
+    animation: bounce 1.5s infinite;
+}
