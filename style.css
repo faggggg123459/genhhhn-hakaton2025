@@ -1,7 +1,7 @@
 /* Фон */
 body {
     font-family: 'Montserrat', sans-serif;
-    color: #4DC4B0; /* 🔥 Березово-синьо-зелений колір */
+    color: #4DC4B0; /* Березово-синьо-зелений магічний колір */
     margin: 0;
     padding: 0;
     display: flex;
@@ -16,7 +16,7 @@ body {
 
 /* Фонова секція */
 .background {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -25,7 +25,7 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    filter: brightness(80%);
+    filter: brightness(70%) blur(3px);
     z-index: -1;
 }
 
@@ -33,98 +33,155 @@ body {
 .container {
     text-align: center;
     width: 80%;
-    max-width: 800px;
-    background: rgba(0, 0, 0, 0.7);
-    padding: 20px;
+    max-width: 850px;
+    background: rgba(0, 0, 0, 0.85);
+    padding: 30px;
     border-radius: 15px;
-    box-shadow: 0px 0px 20px rgba(77, 196, 176, 0.8);
+    box-shadow: 0px 0px 25px rgba(77, 196, 176, 0.8);
+    animation: fadeIn 1.5s ease-in-out;
 }
 
 /* Заголовки */
 h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 36px;
+    font-size: 42px;
+    text-shadow: 0px 0px 20px #4DC4B0;
 }
 
-/* Анімації */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-.fade-in {
-    animation: fadeIn 1.5s ease-in-out;
-}
-
-@keyframes slideIn {
-    from { transform: translateX(-50px); opacity: 0; }
-    to { transform: translateX(0); opacity: 1; }
-}
-
-.slide-in {
-    animation: slideIn 1s ease-in-out;
-}
-
+/* Магічне підсвічування */
 @keyframes textGlow {
     0% { text-shadow: 0px 0px 10px #4DC4B0; }
-    100% { text-shadow: 0px 0px 20px #3AA892; }
+    100% { text-shadow: 0px 0px 25px #3AA892; }
 }
 
 .text-glow {
-    animation: textGlow 1.5s infinite alternate;
+    animation: textGlow 1.8s infinite alternate;
 }
 
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
+/* Хаотичні картинки */
+.image-grid {
+    position: relative;
+    width: 100%;
+    min-height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
 }
 
-.pulse {
-    animation: pulse 2s infinite;
+.random-image {
+    width: 25%;
+    height: auto;
+    position: absolute;
+    animation: floatingMagic 4s infinite alternate ease-in-out;
 }
 
-/* Картинки персонажів */
-.hover-scale {
-    width: 30%;
-    margin: 10px;
-    transition: transform 0.3s ease-in-out;
-}
+/* Випадкові координати */
+.random-image:nth-child(1) { top: 5%; left: 15%; transform: rotate(5deg); }
+.random-image:nth-child(2) { top: 30%; left: 60%; transform: rotate(-5deg); }
+.random-image:nth-child(3) { top: 55%; left: 10%; transform: rotate(7deg); }
+.random-image:nth-child(4) { top: 80%; left: 75%; transform: rotate(-7deg); }
 
-.hover-scale:hover {
-    transform: scale(1.1);
+/* Плавне магічне переміщення */
+@keyframes floatingMagic {
+    0% { transform: translateY(0px) rotate(0deg); }
+    100% { transform: translateY(15px) rotate(3deg); }
 }
 
 /* Кнопка */
 .glow-btn {
-    padding: 15px 30px;
+    padding: 15px 40px;
     background-color: #4DC4B0;
     border: none;
-    font-size: 20px;
+    font-size: 22px;
     color: black;
     cursor: pointer;
-    transition: 0.3s;
-    border-radius: 8px;
+    transition: 0.4s;
+    border-radius: 12px;
     font-weight: bold;
     animation: glow 1.5s infinite alternate;
+    box-shadow: 0px 0px 20px #3AA892;
+    text-transform: uppercase;
 }
 
 @keyframes glow {
-    0% { box-shadow: 0px 0px 10px #3AA892; }
-    100% { box-shadow: 0px 0px 20px #4DC4B0; }
+    0% { box-shadow: 0px 0px 20px #3AA892; }
+    100% { box-shadow: 0px 0px 30px #4DC4B0; }
 }
 
 .glow-btn:hover {
     background-color: #3AA892;
+    transform: scale(1.1);
 }
 
-/* Додаткова анімація */
-@keyframes bounce {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-5px); }
-    100% { transform: translateY(0); }
+/* Магічна завантаження */
+#loading-screen {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    color: #4DC4B0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    z-index: 1000;
+    animation: fadeOut 2s forwards 3s;
 }
 
-.bounce {
-    animation: bounce 1.5s infinite;
+/* Магічне коло */
+.magic-circle {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 6px solid #4DC4B0;
+    animation: spin 2s infinite linear;
+}
+
+
+/* Хаотичне розташування картинок */
+.image-grid {
+    position: relative;
+    width: 100%;
+    min-height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.random-image {
+    width: 18%;
+    height: auto;
+    position: absolute;
+    animation: floatingMagic 5s infinite alternate ease-in-out;
+}
+
+/* Випадкові координати для різноманітного розташування */
+.random-image:nth-child(1) { top: 5%; left: 10%; transform: rotate(5deg); }
+.random-image:nth-child(2) { top: 25%; left: 60%; transform: rotate(-5deg); }
+.random-image:nth-child(3) { top: 50%; left: 15%; transform: rotate(8deg); }
+.random-image:nth-child(4) { top: 75%; left: 70%; transform: rotate(-7deg); }
+.random-image:nth-child(5) { top: 10%; left: 80%; transform: rotate(3deg); }
+.random-image:nth-child(6) { top: 40%; left: 35%; transform: rotate(-9deg); }
+.random-image:nth-child(7) { top: 65%; left: 50%; transform: rotate(6deg); }
+.random-image:nth-child(8) { top: 85%; left: 20%; transform: rotate(-4deg); }
+
+/* Магічне переміщення */
+@keyframes floatingMagic {
+    0% { transform: translateY(0px) rotate(0deg); }
+    100% { transform: translateY(12px) rotate(3deg); }
+}
+
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Плавне зникнення */
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; visibility: hidden; }
 }
