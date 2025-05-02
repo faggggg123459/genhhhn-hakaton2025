@@ -1,23 +1,17 @@
 <!doctype html>
 <html lang="uk">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Геншин Імпакт | Фентезі</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <!-- Тег для фону -->
-    <div class="background"></div>
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Геншин Імпакт Фентезі</title>
-      <style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Контейнер для головного фонового зображення -->
+    <div class="background-container">
+        <div class="background-overlay"></div>
+    </div>
+    <style>
         body {
           background-image: url("https://i.pinimg.com/736x/20/9e/b5/209eb56ccbe0476a74cd9ee42904ff6b.jpg"); /* Замініть на своє зображення */
           background-size: cover; /* Заповнює весь екран */
@@ -27,55 +21,37 @@
           font-family: "Cardo", serif; /* Магічний стиль тексту */
         }
       </style>
-      
-    </head>
 
+    <!-- Основний контент сайту -->
     <div class="container">
-      <header>
-        <h1 class="fade-in">Ласкаво просимо!</h1>
-        <p class="slide-in">
-          Мене звати Клорінда і я запрошую вас поринути у світ незабутніх
-          емоцій!
-        </p>
-      </header>
+        <header>
+            <h1 class="fade-in">Ласкаво просимо!</h1>
+            <p class="slide-in">Мене звати Клорінда і я запрошую вас поринути у світ незабутніх емоцій!</p>
+        </header>
 
-      <main>
-        <section class="description">
-          <p class="text-glow">
-            Хочу пояснити вам, що тут відбувається! Вас чекає незабутня подорож
-            у світ наших фантастичних пригод!
-          </p>
-          <p class="pulse">
-            Я розповім вам, що ви можете робити на нашому сайті — тут є безліч
-            цікавих речей!
-          </p>
-        </section>
+        <main>
+            <section class="description">
+                <p class="text-glow">Хочу пояснити вам, що тут відбувається! Вас чекає незабутня подорож у світ наших фантастичних пригод!</p>
+                <p class="pulse">Я розповім вам, що ви можете робити на нашому сайті — тут є безліч цікавих речей!</p>
+            </section>
 
-        <section class="images">
-          <img
-            class="hover-scale"
-            src="https://i.pinimg.com/736x/19/58/02/1958026989dbb4d8b32e574338f910c1.jpg"
-            alt="Клорінда 1"
-          />
-          <img
-            class="hover-scale"
-            src="https://i.pinimg.com/736x/7f/cf/7f/7fcf7f5cc51cee656e94b610f0a766c5.jpg"
-            alt="Клорінда 2"
-          />
-        </section>
-
-        <section class="quiz">
-          <p class="bounce">
-            Хочу запропонувати тобі такий план! Давай зараз пройдемо невеличкий
-            квест про наших магічних героїв!
-          </p>
-         
-   <a href="quiz2.html" class="glow-btn">START</a>
+            <!-- Контейнер для хаотичних картинок -->
+            <section class="image-grid">
+    <img class="random-image" src="https://i.pinimg.com/736x/75/07/81/750781724f5544ffd15498ac3b089e68.jpg" alt="Магічний світ">
+    <img class="random-image" src="https://i.pinimg.com/736x/e4/d3/f7/e4d3f72013f49af20a52b09eae0cd46a.jpg" alt="Пригоди у Тейваті">
+   
+    <img class="random-image" src="https://i.pinimg.com/736x/15/a4/cb/15a4cb2b8fba056246ece774731d01f4.jpg" alt="Древня магія">
+    <img class="random-image" src="https://i.pinimg.com/736x/39/cd/bd/39cdbdc09c722e706d77225fe62ca83d.jpg" alt="Енергія світла">
+</section>
 
 
-        </section>
-      </main>
+            <section class="quiz">
+                <p class="bounce">Хочу запропонувати тобі такий план! Давай зараз пройдемо невеличкий квест про наших магічних героїв!</p>
+                <a href="quiz.html" class="glow-btn">START</a>
+            </section>
+        </main>
     </div>
+
     <script src="script.js"></script>
-  </body>  
+</body>
 </html>
